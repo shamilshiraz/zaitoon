@@ -3,7 +3,7 @@ import Example from './Mobilehero'
 
 function Hero() {
   return (
-<div className="flex flex-col md:flex-row w-full h-full sm:h-[90vh] bg-[url('../nbbg.avif')] bg-cover justify-center">  
+<div className="flex flex-col md:flex-row w-full h-full sm:h-[90vh] bg-[url('./nbbg.avif')] bg-cover justify-center">  
 <div className=" place-content-center sm:p-12"><Example/></div>
 
     <div className=" w-full sm:w-[50%] flex gap-4 justify-center align-items-center grid  place-content-center p-10">

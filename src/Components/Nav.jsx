@@ -13,7 +13,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-10 flex justify-between items-center px-6 w-full h-[10vh] ">
+      <div className="sticky top-0 z-10 flex justify-between items-center px-6 w-full h-[10vh]  ">
         <div className="z-20">
           <img src="./zaitoonlogo.png" alt="Zaitoon Logo" className="h-[50px]" />
         </div>
