@@ -4,6 +4,7 @@ import About from './Components/About'
 import DualLogoCarousel from './Components/Carousel'
 import Footer from './Components/Footer'
 import Hero from './Components/Hero'
+import Latest from './Components/Latest'
 import Example from './Components/Mobilehero'
 import Nav from './Components/Nav'
 import Services from './Components/Services'
@@ -15,8 +16,9 @@ function App() {
     <Nav/>
     <Hero/>
     <About/>
-    <Services/>
     <DualLogoCarousel/>
+    <Latest/>
+    <Services/>
     <Footer/>
     </>
   )
