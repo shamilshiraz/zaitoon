@@ -9,10 +9,10 @@ function Latest() {
     const {products}=useContext(ShopContext)
     const[latest,setLatest]=useState([])
     useEffect(()=>{
-        setLatest(products.slice(0,10));
+        setLatest(products.slice(0,15));
     },[])
   return (
-    <div className='my-10 mx-20'>
+    <div className='my-10 mx-2'>
         <div className="text-center py-8 text-3xl">
            <p className='3xl'>LATEST <span className='text-blue-600'>PRODUCTS</span></p> 
         </div>

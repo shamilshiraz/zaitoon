@@ -1,54 +1,45 @@
 import React from 'react';
-import { Globe } from 'lucide-react';
 
-const RibbonLogos = () => {
-  const rows = [
-    ["Stripe", "Shopify", "Google", "Amazon", "Meta", "Apple", "Microsoft", "Twitch", "Tesla", "IBM"],
-    ["Netflix", "Adobe", "Slack", "Zoom", "Twitter", "LinkedIn", "Spotify", "Disney", "PayPal", "Unity"],
-    ["Uber", "Airbnb", "Pinterest", "Reddit", "Oracle", "Intel", "Samsung", "Sony", "Nvidia", "Dell"]
+const LogoCarousel = () => {
+  // Add your image URLs to this array
+  const imageUrls = [
+    "./apple.png",
+    "./asus.png",
+    "./huawei.jpeg",
+    "./sony.jpg",
+    "./samsung.png",
+    "./moto.png"
   ];
 
-  const LogoBox = ({ name }) => (
-    <div className="flex items-center justify-center px-8 py-4 bg-white backdrop-blur-sm rounded-lg min-w-[200px]">
-      <Globe className="w-5 h-5 mr-3 text-black" />
-      <span className="text-sm font-medium text-white/70">{name}</span>
+  // Create logo components from the image URLs
+  const logos = imageUrls.map((url, i) => (
+    <div key={i} className="relative flex flex-shrink-0 w-auto transition-all h-12 md:h-16 mr-20">
+      <img 
+        src={url}
+        alt={`Logo ${i + 1}`}
+        className="h-full transition-all duration-300 grayscale invert"
+      />
     </div>
-  );
-
-  const CarouselRow = ({ items, reverse = false }) => {
-    const repeatedItems = [...items, ...items, ...items, ...items];
-    
-    return (
-      <div 
-        className="flex animate-scroll gap-4"
-        style={{
-          animationDirection: reverse ? 'reverse' : 'normal',
-          width: 'max-content'
-        }}
-      >
-        {repeatedItems.map((item, index) => (
-          <div key={index} className="flex-shrink-0">
-            <LogoBox name={item} />
-          </div>
-        ))}
-      </div>
-    );
-  };
+  ));
 
   return (
-    <div className="w-full  flex flex-col items-center justify-center p-8">
-      <div className="w-full max-w-6xl space-y-8">
-        <div className="w-full overflow-hidden">
-          <CarouselRow items={rows[0]} />
-        </div>
-        <div className="w-full overflow-hidden">
-          <CarouselRow items={rows[1]} reverse={true} />
-        </div>
-        {/* <div className="w-full overflow-hidden">
-          <CarouselRow items={rows[2]} />
-        </div> */}
+    <div className="flex overflow-hidden w-full" 
+         style={{
+           WebkitMask: 'linear-gradient(90deg, transparent, white 5% 95%, transparent)',
+           mask: 'linear-gradient(90deg, transparent, white 5% 95%, transparent)'
+         }}>
+      <div 
+        className="flex flex-wrap items-center w-full justify-center gap-20 animate-scroll"
+        style={{
+          minWidth: 'max-content',
+          animation: 'scroll 20s linear infinite'
+        }}
+      >
+        {logos}
+        {logos}  {/* Duplicate for seamless loop */}
       </div>
-      <style jsx global>{`
+
+      <style jsx>{`
         @keyframes scroll {
           0% {
             transform: translateX(0);
@@ -58,11 +49,14 @@ const RibbonLogos = () => {
           }
         }
         .animate-scroll {
-          animation: scroll 40s linear infinite;
+          will-change: transform;
+        }
+        .animate-scroll:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </div>
   );
 };
 
-export default RibbonLogos;
+export default LogoCarousel;

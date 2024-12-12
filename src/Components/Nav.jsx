@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [visible, setVisible] = useState(false);
@@ -7,7 +8,7 @@ const Nav = () => {
   const navItems = [
     { title: 'Home', path: '/' },
     { title: 'About', path: '/about' },
-    { title: 'Products', path: '/products' },
+    { title: 'Products', path: '/col' },
     { title: 'Contact', path: '/contact' }
   ];
 
@@ -33,11 +34,10 @@ const Nav = () => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex py-3">
           <ul className="flex gap-6">
-            {navItems.map((item) => (
-              <li key={item.title} className="hover:text-gray-600 cursor-pointer">
-                {item.title}
-              </li>
-            ))}
+          <li><Link to={'/'}>Home</Link></li>
+            <li><Link to={'/about'}>About</Link></li>
+            <li><Link to={'/col'}>Products</Link></li>
+            <li><Link to={'/contact'}>Contact</Link></li>
           </ul>
         </div>
 
@@ -52,13 +52,14 @@ const Nav = () => {
           <div className="flex flex-col pt-[10vh]">
             <ul className="flex flex-col gap-4 p-6">
               {navItems.map((item) => (
-                <li 
+                <Link 
                   key={item.title}
                   className="hover:text-gray-600 cursor-pointer text-lg"
                   onClick={() => setVisible(false)}
+                  to={item.path}
                 >
                   {item.title}
-                </li>
+                </Link>
               ))}
             </ul>
           </div>
