@@ -2,13 +2,17 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-blue-800 text-white sm:flex justify-between">
+    <footer className="bg-blue-800 text-white sm:flex justify-between mt-3">
+      <div className="flex ">
+        <img src="./zaitoonlogo.png" className='h-[1 00px]' alt="" />
       <div className="flex flex-col items-start p-10 space-y-4">
         <p className="text-3xl font-bold">Find us at</p>
         <p>Al Daith South, opp. Stirling University</p>
         <p>Ras Al Khaimah</p>
         <p>+971 12345678</p>
       </div>
+      </div>
+
       <div className="p-4">
         <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg" style={{ aspectRatio: '16 / 9' }}>
           <iframe

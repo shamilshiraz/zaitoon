@@ -9,7 +9,7 @@ function Latest() {
     const {products}=useContext(ShopContext)
     const[latest,setLatest]=useState([])
     useEffect(()=>{
-        setLatest(products.slice(0,15));
+        setLatest(products.slice(0,5));
     },[])
   return (
     <div className='my-10 mx-2'>

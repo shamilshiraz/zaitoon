@@ -78,17 +78,17 @@ function Collection() {
                     <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
                     <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'sneakers'} onChange={toggleCategory}/>Sneakers
+                            <input className='w-3' type="checkbox" value={'phone'} onChange={toggleCategory}/>Phones
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'tees'} onChange={toggleCategory}/>T-shirts
+                            <input className='w-3' type="checkbox" value={'laptop'} onChange={toggleCategory}/>Laptop
                         </p>
-                        <p className='flex gap-2'>
+                        {/* <p className='flex gap-2'>
                             <input className='w-3' type="checkbox" value={'caps'} onChange={toggleCategory} />Caps
                         </p>
                         <p className='flex gap-2'>
                             <input className='w-3' type="checkbox" value={'belt'} onChange={toggleCategory}/>Belts
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@ function Collection() {
             <div className="flex-1">
                 <div className="flex justify-between text-base sm:text-2xl mb-4">
 <p>ALL COLLECTIONS</p>                    {/* PRODUCTS SORT */}
-                    <select onChange={(e)=>setSortType(e.target.value)} className='border-2 border-gray-300 text-sm px-2'>
+                    <select onChange={(e)=>setSortType(e.target.value)} className='border-2 border-gray-300 bg-black text-sm px-2'>
                         <option value="relevance">Relevance</option>
                         <option value="low-high">Low to high</option>
                         <option value="high-low">High to low</option>

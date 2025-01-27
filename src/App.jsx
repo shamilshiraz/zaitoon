@@ -13,6 +13,7 @@ import LogoCarousel from './Components/Carousel'
 import Products from './Components/Products'
 import Newsletter from './Components/Newsletter'
 import Collection from './Components/Collection'
+import Contact from './Components/Contact'
 
 
 function App() {
@@ -28,19 +29,24 @@ function App() {
     <LogoCarousel/>
     <Latest/>
     <Services/>
+    <Newsletter/>
       </>}/>
       <Route path='/about' element={<>
         <About/>
+        <Newsletter/>
       </>}/>
       <Route path='/products' element={<>
       <Products/>
         </>}/>
       <Route path='/products/:productId' element={<Products/>}/>
-      <Route path='/col' element={<Collection/>}/>
+      <Route path='/col' element={<>
+        <Collection/>
+      </>
+      }/>
+      <Route path='/contact' element={<Contact/>}/>
 
     </Routes>
     {/* <Discount/> */}
-    <Newsletter/>
     <Footer/>
     </>
   )

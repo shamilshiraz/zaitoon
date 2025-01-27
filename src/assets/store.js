@@ -87,7 +87,7 @@ export const products=[
         name:'oneplus 12ra',
         price:'4200',
         image:[img5a,img5b,img5c,img5d],
-        category:'phone',
+        categ:'phone',
         description:'oneplus 12ra with 16mp camera'
     },
     {
@@ -128,7 +128,7 @@ export const products=[
         name:'samsung galaxy z flip',
         price:'6500',
         image:[img10a,img10b],
-        category:'phone',
+        categ:'phone',
         description:'go back to classic flip phones'
     },
         {
@@ -136,14 +136,14 @@ export const products=[
         name:'macbook m2',
         price:'6500',
         image:[img11a,img11b],
-        category:'laptop',
+        categ:'laptop',
         description:'macbook m2'
     },        {
         id:'al',
         name:'macbook m1',
         price:'2500',
         image:[img12a,img12b,img12c],
-        category:'laptop',
+        categ:'laptop',
         description:'macbook m1'
     },
     {
@@ -151,14 +151,14 @@ export const products=[
         name:'hp pavillion ',
         price:'4000',
         image:[img13a,img13b],
-        category:'laptop',
+        categ:'laptop',
         description:' hp pavillion for professionals'
     },    {
         id:'an',
         name:'asus tuf',
         price:'3000',
         image:[img14a,img14b],
-        category:'laptop',
+        categ:'laptop',
         description:'ASUS tuff gaming laptop '
     },
     {
@@ -166,7 +166,7 @@ export const products=[
         name:'Hp victus',
         price:'3000',
         image:[img15a,img15b],
-        category:'laptop',
+        categ:'laptop',
         description:'Hp victus gaming laptop'
     },
 
